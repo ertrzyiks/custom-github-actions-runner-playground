@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Run tests
         run: |
-          echo "Running tests"
+          echo "SIEMA!!"
