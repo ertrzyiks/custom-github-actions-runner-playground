@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  workflow_call:
+    inputs:
+      param:
+        type: string
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+    steps:
+      - name: Run tests
+        run: |
+          echo "Hello ${{ inputs.param }} ${{ matrix.version }}"
