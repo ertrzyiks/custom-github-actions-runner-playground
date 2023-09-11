@@ -5,8 +5,4 @@ on:
 
 jobs:
   test:
-    runs-on: [self-hosted, awesome]
-    steps:
-      - name: Run tests
-        run: |
-          echo "Bonjour!!"
+    uses: ./.github/workflows/sub-ci.yml
