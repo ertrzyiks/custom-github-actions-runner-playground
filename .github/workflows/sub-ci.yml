@@ -2,6 +2,10 @@ name: CI
 
 on:
   workflow_call:
+    inputs:
+      param:
+        type: string
+        required: true
 
 jobs:
   test:
@@ -12,4 +16,4 @@ jobs:
     steps:
       - name: Run tests
         run: |
-          echo "Hello ${{ matrix.version }}"
+          echo "Hello ${{ inputs.param }} ${{ matrix.version }}"
